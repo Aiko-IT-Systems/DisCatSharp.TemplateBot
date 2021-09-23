@@ -105,13 +105,8 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-Nyaw/bin/
-Nyaw/obj/
 .vs/
-AITSYS CDN/bin
-AITSYS CDN/obj
-YouTube Together Generator/bin
-YouTube Together Generator/obj
-/Nyaw/log.txt
 .vscode/launch.json
 .vscode/tasks.json
+bin/
+obj/
