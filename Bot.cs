@@ -70,6 +70,7 @@ namespace TemplateBot
         public async Task RunAsync()
         {
             await Client.ConnectAsync();
+            RegisterCommands(ApplicationCommands);
             while (!ShutdownRequest.IsCancellationRequested)
             {
                 await Task.Delay(2000);
@@ -105,10 +106,10 @@ namespace TemplateBot
         {
             //ac.RegisterCommands<Commands.SlashCommands>(); // global - SlashCommands.Main = Ordner.Class
 
-            /* foreach (var id in Program.Guilds)
+            foreach (var id in Program.Guilds)
             {
                 ac.RegisterCommands<Commands.SlashCommands>(id);
-            } */
+            }
         }
         private static Task Client_Ready(DiscordClient dcl, ReadyEventArgs e)
         {
