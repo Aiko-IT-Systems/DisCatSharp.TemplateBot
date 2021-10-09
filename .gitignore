@@ -110,4 +110,5 @@ $RECYCLE.BIN/
 .vscode/tasks.json
 bin/
 obj/
-config.json
+
+*.json
