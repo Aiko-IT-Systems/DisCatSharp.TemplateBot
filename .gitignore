@@ -112,3 +112,4 @@ bin/
 obj/
 
 *.json
+config.json
