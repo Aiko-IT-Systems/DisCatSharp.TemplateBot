@@ -130,7 +130,7 @@ namespace TemplateBot
             }
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Bot ready!");
-            DiscordActivity activity = new()
+            DiscordActivity activity = new() //TODO: Activity 
             {
                 Name = "`/help`",
                 ActivityType = ActivityType.Playing

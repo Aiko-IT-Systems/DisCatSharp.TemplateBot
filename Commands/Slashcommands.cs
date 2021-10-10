@@ -14,6 +14,14 @@ namespace TemplateBot.Commands
 {
     class SlashCommands : ApplicationCommandsModule
     {
+
+        /* //TODO Helpcommand
+        [SlashCommand("help", "Coming soon")]
+        public static async Task Help(InteractionContext ctx)
+        {
+            await ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DiscordInteractionResponseBuilder().WithContent("Not yet implemented"));
+        } */
+
         [SlashCommand("ping", "Send's the actual ping")]
         public static async Task Ping(InteractionContext ctx)
         {
@@ -53,7 +61,7 @@ namespace TemplateBot.Commands
                 .AddField("Number of Guilds:", $"`{bot.Guilds.Count}`", true)
                 .AddField("Number of Commands:", $"`{bot.GetApplicationCommands().RegisteredCommands.First().Value.Count}`", true)
                 .AddField("The Dev(s):", $"{getDevs(bot.CurrentApplication)}")
-                .AddField("Library:", $"The Bot was written in C# using the {Formatter.MaskedUrl(bot.BotLibrary, new Uri("https://github.com/Aiko-IT-Systems/DisCatSharp"))} Library. \n The Template fot this Bot can be found {Formatter.MaskedUrl("here", new Uri("https://github.com/Aiko-It-Systems/DisCatSharp.TemplateBot"))}.")
+                .AddField("Library:", $"This Bot was written in C# using the {Formatter.MaskedUrl(bot.BotLibrary, new Uri("https://github.com/Aiko-IT-Systems/DisCatSharp"))} Library. \n The Template for this Bot can be found {Formatter.MaskedUrl("here", new Uri("https://github.com/Aiko-It-Systems/DisCatSharp.TemplateBot"))}.")
                 .WithTimestamp(DateTime.Now)
                 .WithColor(DiscordColor.Azure);
             await ctx.EditResponseAsync(new DiscordWebhookBuilder().AddEmbed(embed));
